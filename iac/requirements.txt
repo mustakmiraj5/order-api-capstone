@@ -1,2 +1,6 @@
 pulumi>=3.0.0,<4.0.0
 pulumi-aws>=7.0.0,<8.0.0
+# Generates the EC2 keypair. The private half is kept as an encrypted secret
+# output, so a wiped lab VM can recover SSH access from stack state rather than
+# from a .pem file that died with the VM.
+pulumi-tls>=5.0.0,<6.0.0
